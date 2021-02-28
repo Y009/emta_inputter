@@ -18,13 +18,13 @@ def est_stonk_input(driver):
         for i in range(len(stonk)):
             driver.find_element_by_id("add_localStockfunds_STOCK_FUNDS_code").send_keys( isin[i] )
             driver.find_element_by_id("add_localStockfunds_STOCK_FUNDS_name").send_keys( stonk[i] )
-            driver.find_element_by_id("add_localStockfunds_STOCK_FUNDS_type").send_keys( Keys.DOWN + Keys.RETURN )
+            driver.find_element_by_id("add_localStockfunds_STOCK_FUNDS_type").send_keys( Keys.DOWN + Keys.RETURN )  # choose aktsiad from dropdown
             driver.find_element_by_id("add_localStockfunds_STOCK_FUNDS_appropriationDate").send_keys( date[i] )
             driver.find_element_by_id("add_localStockfunds_STOCK_FUNDS_amount").send_keys( amount[i] )
             driver.find_element_by_id("add_localStockfunds_STOCK_FUNDS_costAmount").send_keys( cost[i] )
             driver.find_element_by_id("add_localStockfunds_STOCK_FUNDS_appropriationCost").send_keys( appropriationCost[i] )
             driver.find_element_by_id("add_localStockfunds_STOCK_FUNDS_sellingPrice").send_keys( sellPrice[i] )
-            if i is not 0:
+            if i != 0:
                 driver.find_elements_by_class_name("icon-close ")[0].click()
             driver.find_element_by_id("add-local-stockfunds-stock-funds-save-button").click()
             sleep(0.1)
