@@ -12,3 +12,6 @@ where C:\selenium\ChromeProfile will be used to save a new chrome location
   - open appropriate subsection 
   - run desired script
 
+
+
+Possible updates incoming at: 2022 tax season
